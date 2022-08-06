@@ -1,11 +1,6 @@
 .header{
-    @apply flex items-center justify-between h-16 text-blue-100 px-4;
-    @apply lg:container lg:mx-auto lg:px-0;
-
-    &__wrapper{
-        @apply bg-gray-100 mt-0;
-        @apply lg:mt-12;
-    }
+    @apply flex flex-row-reverse items-center justify-between h-16 text-blue-100 px-4;
+    @apply lg:container lg:mx-auto lg:px-0 lg:flex-row;
 
     &__form{
         @apply flex items-center;
@@ -16,12 +11,23 @@
         }
     }
 
+    &__hamburger-icon{
+        @apply mx-[7px];
+        @apply lg:hidden;
+    }
+
+    &__close-icon{
+        @apply text-3xl;
+        @apply lg:hidden;
+    }
+
     &__title{
         @apply text-3xl font-extrabold;
     }
 
     &__social-icons{
-        @apply flex items-center;
+        @apply hidden items-center;
+        @apply lg:flex;
 
         & svg{
             @apply ml-3;

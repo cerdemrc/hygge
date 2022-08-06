@@ -1,0 +1,29 @@
+.navigation{
+    &__desktop{
+        @apply hidden bg-gray-100 items-center justify-center h-16;
+        @apply lg:mt-12 lg:flex;
+
+        &-item{
+            @apply pr-3;
+            @apply last:pr-0;
+    
+            & a{
+                @apply hover:cursor-pointer hover:text-blue-hover;
+            }
+        }
+    }
+
+    &__mobile{
+        @apply px-4 py-5 bg-blue-100 text-white;
+        @apply lg:hidden;
+
+        &-list{
+            @apply flex flex-col text-sm;
+        }
+
+        &-item{
+            @apply pt-3;
+            @apply first:pt-0;
+        }
+    }
+}
