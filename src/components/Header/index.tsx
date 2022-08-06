@@ -9,6 +9,7 @@ import { HiPlus } from 'react-icons/hi';
 import { IoCloseOutline } from 'react-icons/io5';
 import './index.scss';
 import Navigation from '../Navigation';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
@@ -21,10 +22,10 @@ const Header: React.FC = () => {
 		<>
 			<header className='header__wrapper'>
 				<div className='header'>
-					<a href='#' className='header__form'>
+					<div className='header__form'>
 						<HiPlus />
-						<span>Write</span>
-					</a>
+						<Link to='/form'>Write</Link>
+					</div>
 
 					<a href='/' className='header__title'>
 						DaBBa
