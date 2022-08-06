@@ -1,11 +1,12 @@
 import './App.scss';
+import Homepage from './layouts/Homepage';
 
-function App() {
+const App: React.FC = () => {
 	return (
 		<div className='App'>
-			<h1>welcome hygge</h1>
+			<Homepage />
 		</div>
 	);
-}
+};
 
 export default App;

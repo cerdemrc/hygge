@@ -1,3 +1,7 @@
-.App {
-  @apply text-center;
+*{
+    @apply p-0 m-0 box-border;
+}
+
+.App{
+    @apply w-full h-screen;
 }

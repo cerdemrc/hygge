@@ -1,0 +1,33 @@
+.header{
+    @apply flex items-center justify-between h-16 text-blue-100 px-4;
+    @apply lg:container lg:mx-auto lg:px-0;
+
+    &__wrapper{
+        @apply bg-gray-100 mt-0;
+        @apply lg:mt-12;
+    }
+
+    &__form{
+        @apply flex items-center;
+        @apply hover:text-blue-hover;
+
+        & span{
+            @apply text-sm font-normal pl-1;
+        }
+    }
+
+    &__title{
+        @apply text-3xl font-extrabold;
+    }
+
+    &__social-icons{
+        @apply flex items-center;
+
+        & svg{
+            @apply ml-3;
+            @apply hover:cursor-pointer hover:text-blue-hover;
+
+        }
+    }
+
+}
