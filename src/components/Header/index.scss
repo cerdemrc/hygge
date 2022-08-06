@@ -6,7 +6,7 @@
         @apply flex items-center;
         @apply hover:text-blue-hover;
 
-        & span{
+        & a{
             @apply text-sm font-normal pl-1;
         }
     }

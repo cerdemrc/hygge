@@ -1,12 +1,7 @@
 import './App.scss';
-import Homepage from './layouts/Homepage';
 
 const App: React.FC = () => {
-	return (
-		<div className='App'>
-			<Homepage />
-		</div>
-	);
+	return <div className='App'></div>;
 };
 
 export default App;
