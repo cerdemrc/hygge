@@ -28,7 +28,7 @@ const Header: React.FC = () => {
 					</div>
 
 					<a href='/' className='header__title'>
-						DaBBa
+						hyGGe
 					</a>
 					{showMobileMenu ? (
 						<IoCloseOutline

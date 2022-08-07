@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import './index.scss';
 import Home from './pages/Home';
 import AddBlog from './pages/AddBlog';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const Routing = () => {
 	return (
@@ -17,8 +18,10 @@ const Routing = () => {
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<Routing />
-		</BrowserRouter>
+		<ChakraProvider>
+			<BrowserRouter>
+				<Routing />
+			</BrowserRouter>
+		</ChakraProvider>
 	</React.StrictMode>
 );
