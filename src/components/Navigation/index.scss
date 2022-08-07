@@ -4,7 +4,7 @@
         @apply lg:mt-12 lg:flex;
 
         &-item{
-            @apply pr-3;
+            @apply pr-8;
             @apply last:pr-0;
     
             & a{
@@ -22,7 +22,7 @@
         }
 
         &-item{
-            @apply pt-3;
+            @apply pt-4 text-xl px-3;
             @apply first:pt-0;
         }
     }
