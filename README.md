@@ -1,14 +1,10 @@
-<img align="left" src="https://media.giphy.com/media/Dh5q0sShxgp13DwrvG/giphy.gif" width="35%"> 
-  
-<div align="right">
+<div align="left">
   <h2>hyGGe</h2>
   <p><strong>Used Techs:</strong> React Js, Typescript, Redux Toolkit, SCSS, Tailwind, Chakra UI</p>
 
   ![repo size](https://img.shields.io/github/repo-size/cerdemrc/hygge?style=plastic)
   ![last commit](https://img.shields.io/github/last-commit/cerdemrc/hygge?style=plastic)
 </div>
-
-<br><br>
 
 ### Frontend File Structure
 
