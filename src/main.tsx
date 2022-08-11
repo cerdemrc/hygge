@@ -6,6 +6,8 @@ import './index.scss';
 import Home from './pages/Home';
 import AddBlog from './pages/AddBlog';
 import { ChakraProvider } from '@chakra-ui/react';
+import { store } from './app/store';
+import { Provider } from 'react-redux';
 
 const Routing = () => {
 	return (
@@ -17,11 +19,13 @@ const Routing = () => {
 };
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-	<React.StrictMode>
-		<ChakraProvider>
-			<BrowserRouter>
-				<Routing />
-			</BrowserRouter>
-		</ChakraProvider>
-	</React.StrictMode>
+	<Provider store={store}>
+		<React.StrictMode>
+			<ChakraProvider>
+				<BrowserRouter>
+					<Routing />
+				</BrowserRouter>
+			</ChakraProvider>
+		</React.StrictMode>
+	</Provider>
 );
