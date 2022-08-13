@@ -4,10 +4,11 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { BlogCategory } from '../../types';
 import { addBlog } from '../../features/blog/blogSlice';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../../app/store';
 
 const Form: React.FC = () => {
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
+
 	const [blog, setBlog] = useState({
 		id: uuidv4(),
 		title: '',
