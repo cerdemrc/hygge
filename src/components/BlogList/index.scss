@@ -1,0 +1,35 @@
+.blog{
+    &-list{
+        @apply grid grid-cols-1 gap-3 pt-10 container mx-auto;
+        @apply md:grid-cols-2;
+        @apply xl:grid-cols-3 xl:gap-5;
+    }
+
+    &-item{
+        @apply relative h-full;
+
+        & img{
+            @apply w-full h-full brightness-50;
+        }
+        &__content{
+            @apply absolute top-3 left-3 p-1;
+            @apply md:p-2;
+            @apply lg:p-3;
+            @apply xl:p-4;
+
+            & span{
+                @apply text-white text-sm;
+                @apply md:text-base;
+                @apply lg:text-lg;
+                @apply xl:text-xl;
+            }
+        }
+
+        &__title{
+            @apply font-bold text-2xl text-white pt-1;
+            @apply md:text-3xl;
+            @apply lg:text-4xl lg:pt-3;
+            @apply xl:text-5xl;
+        }
+    }
+}
