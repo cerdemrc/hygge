@@ -2,16 +2,19 @@ import { Input, Select, Textarea, Button, Container } from '@chakra-ui/react';
 import './index.scss';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { blogCategoryItem } from './blogCategoryItem';
+import { BlogCategory } from '../../types';
+import { addBlog } from '../../features/blog/blogSlice';
+import { useDispatch } from 'react-redux';
 
 const Form: React.FC = () => {
+	const dispatch = useDispatch();
 	const [blog, setBlog] = useState({
-		blogID: uuidv4(),
-		blogTitle: '',
-		blogAuthor: '',
-		blogImage: '',
-		blogCategory: '',
-		blogContent: '',
+		id: uuidv4(),
+		title: '',
+		author: '',
+		image: '',
+		category: '',
+		content: '',
 	});
 
 	const handleAddBlog = (
@@ -28,7 +31,7 @@ const Form: React.FC = () => {
 	};
 
 	const handleSubmitBlog = () => {
-		console.log(blog);
+		dispatch(addBlog(blog));
 	};
 
 	return (
@@ -36,28 +39,28 @@ const Form: React.FC = () => {
 			<div className='form__wrapper'>
 				<Input
 					placeholder='Blog Title'
-					name='blogTitle'
-					value={blog['blogTitle']}
+					name='title'
+					value={blog['title']}
 					onChange={(e) => handleAddBlog(e)}
 				/>
 				<Input
 					placeholder='Author'
-					name='blogAuthor'
-					value={blog['blogAuthor']}
+					name='author'
+					value={blog['author']}
 					onChange={(e) => handleAddBlog(e)}
 				/>
 				<Input
 					placeholder='Image URL'
-					name='blogImage'
-					value={blog['blogImage']}
+					name='image'
+					value={blog['image']}
 					onChange={(e) => handleAddBlog(e)}
 				/>
 				<Select
 					placeholder='Category'
-					value={blog['blogCategory']}
-					name='blogCategory'
+					value={blog['category']}
+					name='category'
 					onChange={(e) => handleAddBlog(e)}>
-					{blogCategoryItem.map((category, index) => (
+					{BlogCategory.map((category, index) => (
 						<option key={index} value={category}>
 							{category}
 						</option>
@@ -66,8 +69,8 @@ const Form: React.FC = () => {
 
 				<Textarea
 					placeholder='Blog Content'
-					value={blog['blogContent']}
-					name='blogContent'
+					value={blog['content']}
+					name='content'
 					onChange={(e) => handleAddBlog(e)}
 				/>
 
