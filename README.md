@@ -17,10 +17,17 @@
     `src` folder which contains your working files that will be used later to create the build. the src folder contains folders as:
     
     ``` 
+    ├── app                
+    │   ├── store.ts
     ├── components                
+    │   ├── BlogItem
+    │   ├── BlogList
     │   ├── Form
     │   ├── Header         
-    │   └── Navigation                
+    │   └── Navigation
+    ──features
+    │   └── blog
+    │       └── blogSlice.ts
     └──layouts
     │   └── DefaultLayout.tsx
     └──pages
@@ -33,6 +40,7 @@
     └──App.tsx
     └──App.scss
     └──main.tsx
+    └──types.ts
     └──index.scss
     ``` 
                    
