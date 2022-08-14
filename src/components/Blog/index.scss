@@ -73,4 +73,9 @@
             @apply lg:text-2xl lg:pb-10;        
         }
     }
+
+    &-info{
+        @apply w-full text-center text-lg font-medium mt-10 py-5 bg-blue-hover text-white;
+        @apply sm:text-3xl;
+    }
 }

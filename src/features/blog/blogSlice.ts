@@ -1,6 +1,6 @@
+import { BlogState } from './../../types';
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from '@reduxjs/toolkit'; 
-import { BlogState } from '../../types';
 
 const LOCAL_STORAGE_KEY = "blog-list";
 
@@ -13,7 +13,8 @@ function getBlogListFromLocalStorage()
 }
 
 const initialState = {
-    blogList: getBlogListFromLocalStorage()
+    blogList: getBlogListFromLocalStorage(),
+    filteredBlogList: []
 };
 
 export const blogSlice = createSlice({
@@ -40,10 +41,15 @@ export const blogSlice = createSlice({
                     ])
                 );
               }
+        },
+        getFilteredBlogList: (state, action: PayloadAction<string | undefined>) => {
+            const blogList = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY) || '{}');
+            const filteredBlogList = blogList.filter((item: any) => item.category == action.payload)
+            state.filteredBlogList = filteredBlogList;
         }
     }
 })
 
-export const { addBlog } = blogSlice.actions;
+export const { addBlog, getFilteredBlogList } = blogSlice.actions;
 
 export default blogSlice.reducer;
