@@ -1,0 +1,8 @@
+.back-button a {
+    @apply flex items-center text-base font-medium;
+    @apply hover:text-blue-hover;
+
+    & svg{
+        @apply text-2xl pr-2;
+    }
+}

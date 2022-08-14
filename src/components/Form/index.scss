@@ -5,13 +5,4 @@
         @apply flex flex-col gap-y-3 mt-5;
         @apply lg:container lg:mx-auto lg:mt-10;
     }
-
-    &__back-button {
-        @apply flex items-center text-base font-medium;
-        @apply hover:text-blue-hover;
-
-        & svg{
-            @apply text-2xl pr-2;
-        }
-    }
 }

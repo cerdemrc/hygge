@@ -6,6 +6,7 @@ import { BlogCategory } from '../../types';
 import { addBlog } from '../../features/blog/blogSlice';
 import { useAppDispatch } from '../../app/store';
 import { IoMdArrowRoundBack } from 'react-icons/io';
+import BackButton from '../BackButton';
 
 const Form: React.FC = () => {
 	const dispatch = useAppDispatch();
@@ -39,9 +40,7 @@ const Form: React.FC = () => {
 
 	return (
 		<div className='form'>
-			<a className='form__back-button' href='/'>
-				<IoMdArrowRoundBack /> Back
-			</a>
+			<BackButton />
 
 			<Container maxW='3xl'>
 				<div className='form__wrapper'>
