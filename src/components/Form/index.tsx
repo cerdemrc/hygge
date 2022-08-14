@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { BlogCategory } from '../../types';
 import { addBlog } from '../../features/blog/blogSlice';
 import { useAppDispatch } from '../../app/store';
+import { IoMdArrowRoundBack } from 'react-icons/io';
 
 const Form: React.FC = () => {
 	const dispatch = useAppDispatch();
@@ -33,53 +34,60 @@ const Form: React.FC = () => {
 
 	const handleSubmitBlog = () => {
 		dispatch(addBlog(blog));
+		window.location.replace('/');
 	};
 
 	return (
-		<Container maxW='3xl'>
-			<div className='form__wrapper'>
-				<Input
-					placeholder='Blog Title'
-					name='title'
-					value={blog['title']}
-					onChange={(e) => handleAddBlog(e)}
-				/>
-				<Input
-					placeholder='Author'
-					name='author'
-					value={blog['author']}
-					onChange={(e) => handleAddBlog(e)}
-				/>
-				<Input
-					placeholder='Image URL'
-					name='image'
-					value={blog['image']}
-					onChange={(e) => handleAddBlog(e)}
-				/>
-				<Select
-					placeholder='Category'
-					value={blog['category']}
-					name='category'
-					onChange={(e) => handleAddBlog(e)}>
-					{BlogCategory.map((category, index) => (
-						<option key={index} value={category}>
-							{category}
-						</option>
-					))}
-				</Select>
+		<div className='form'>
+			<a className='form__back-button' href='/'>
+				<IoMdArrowRoundBack /> Back
+			</a>
 
-				<Textarea
-					placeholder='Blog Content'
-					value={blog['content']}
-					name='content'
-					onChange={(e) => handleAddBlog(e)}
-				/>
+			<Container maxW='3xl'>
+				<div className='form__wrapper'>
+					<Input
+						placeholder='Blog Title'
+						name='title'
+						value={blog['title']}
+						onChange={(e) => handleAddBlog(e)}
+					/>
+					<Input
+						placeholder='Author'
+						name='author'
+						value={blog['author']}
+						onChange={(e) => handleAddBlog(e)}
+					/>
+					<Input
+						placeholder='Image URL'
+						name='image'
+						value={blog['image']}
+						onChange={(e) => handleAddBlog(e)}
+					/>
+					<Select
+						placeholder='Category'
+						value={blog['category']}
+						name='category'
+						onChange={(e) => handleAddBlog(e)}>
+						{BlogCategory.map((category, index) => (
+							<option key={index} value={category}>
+								{category}
+							</option>
+						))}
+					</Select>
 
-				<Button colorScheme='facebook' onClick={handleSubmitBlog}>
-					Send
-				</Button>
-			</div>
-		</Container>
+					<Textarea
+						placeholder='Blog Content'
+						value={blog['content']}
+						name='content'
+						onChange={(e) => handleAddBlog(e)}
+					/>
+
+					<Button colorScheme='facebook' onClick={handleSubmitBlog}>
+						Send
+					</Button>
+				</div>
+			</Container>
+		</div>
 	);
 };
 

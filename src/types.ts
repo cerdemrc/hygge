@@ -13,7 +13,7 @@ export const BlogCategory: Array<string> = [
     'Self-Improvement',
     'Book',
     'Game',
-    'Film',
+    'Movie',
     'Food',
     'Travel'
 ];

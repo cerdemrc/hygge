@@ -1,6 +1,6 @@
 .blog{
     &-list{
-        @apply grid grid-cols-1 gap-3 pt-10 container mx-auto;
+        @apply grid grid-cols-1 gap-3 pt-10 pb-14 container mx-auto auto-rows-fr;
         @apply md:grid-cols-2;
         @apply xl:grid-cols-3 xl:gap-5;
     }
@@ -28,8 +28,7 @@
         &__title{
             @apply font-bold text-2xl text-white pt-1;
             @apply md:text-3xl;
-            @apply lg:text-4xl lg:pt-3;
-            @apply xl:text-5xl;
+            @apply lg:pt-3;
         }
     }
 }
