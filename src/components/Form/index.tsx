@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { BlogCategory } from '../../types';
 import { addBlog } from '../../features/blog/blogSlice';
 import { useAppDispatch } from '../../app/store';
-import { IoMdArrowRoundBack } from 'react-icons/io';
 import BackButton from '../BackButton';
 
 const Form: React.FC = () => {

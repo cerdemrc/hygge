@@ -1,14 +1,14 @@
 import DefaultLayout from '../../layouts/DefaultLayout';
-import BlogList from '../../components/Blog/list';
+import BlogDetail from '../../components/Blog/detail';
 
-const Home: React.FC = () => {
+const Blog: React.FC = () => {
 	return (
 		<>
 			<DefaultLayout>
-				<BlogList />
+				<BlogDetail />
 			</DefaultLayout>
 		</>
 	);
 };
 
-export default Home;
+export default Blog;
