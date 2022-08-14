@@ -18,35 +18,21 @@
     
     ``` 
     ├── app                
-    │   ├── store.ts
+    │     ├── store.ts
     ├── components                
-    │   ├── BlogItem
-    │   ├── BlogList
-    │   ├── Form
-    │   ├── Header         
-    │   └── Navigation
-    ──features
-    │   └── blog
-    │       └── blogSlice.ts
+    │── features
+    │     └── blog
+    │         └── blogSlice.ts
     └──layouts
     │   └── DefaultLayout.tsx
     └──pages
-    │   └── AddBlog   
-    │       └── index.tsx  
-    │   └── Home   
-    │       └── index.tsx 
-    └──routes
-    │   └── index.tsx  
     └──App.tsx
     └──App.scss
     └──main.tsx
     └──types.ts
     └──index.scss
-    ``` 
-                   
-    `public` - is the web-accessible root of the site. Basically whatever is in that folder can be opened from the browser address bar. The server won't provide user access to files outside the public.   
-    </details> 
-
+    ```            
+    
 ### Quick Start
 
   #### 1. Run `npm install`
