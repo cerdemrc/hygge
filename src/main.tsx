@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.scss';
 import Home from './pages/Home';
 import AddBlog from './pages/AddBlog';
+import Blog from './pages/Blog';
 import { ChakraProvider } from '@chakra-ui/react';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
@@ -14,6 +14,7 @@ const Routing = () => {
 		<Routes>
 			<Route path='' element={<Home />} />
 			<Route path='form' element={<AddBlog />} />
+			<Route path='blog-detail/:id' element={<Blog />} />
 		</Routes>
 	);
 };
