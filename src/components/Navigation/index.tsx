@@ -1,6 +1,5 @@
 import './index.scss';
 import { BlogCategory } from '../../types';
-import { Link } from 'react-router-dom';
 interface IProps {
 	showMobileMenu: boolean;
 }
@@ -11,7 +10,7 @@ const Navigation: React.FC<IProps> = ({ showMobileMenu }) => {
 			<ul className='navigation__desktop'>
 				{BlogCategory.map((category, index) => (
 					<li className='navigation__desktop-item' key={index}>
-						<Link to={category}>{category}</Link>
+						<a href={`/${category}`}>{category}</a>
 					</li>
 				))}
 			</ul>
