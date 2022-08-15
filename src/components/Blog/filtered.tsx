@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../app/store';
 import { getFilteredBlogList } from '../../features/blog/blogSlice';
 import BlogItem from './item';
 import { BlogState } from '../../types';
+import NotFound from '../NotFound';
 import './index.scss';
 
 const FilteredBlogList: React.FC = () => {
@@ -26,9 +27,7 @@ const FilteredBlogList: React.FC = () => {
 					))}
 				</div>
 			) : (
-				<h1 className='blog-info'>
-					whattttt???? no blog posts for this category were found.
-				</h1>
+				<NotFound />
 			)}
 		</>
 	);

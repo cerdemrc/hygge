@@ -1,0 +1,8 @@
+.not-found{
+    @apply flex flex-col items-center justify-center mt-10;
+    
+    &__title{
+        @apply text-center text-2xl font-medium text-black pt-5;
+        @apply sm:text-5xl;
+    }
+}
